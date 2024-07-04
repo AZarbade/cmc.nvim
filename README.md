@@ -2,11 +2,11 @@
 
 <!-- panvimdoc-ignore-start -->
 
-![license](https://img.shields.io/github/AZarbade/cmc.nvim?style=flat-square)
+![license](https://img.shields.io/github/license/AZarbade/cmc.nvim?style=flat-square)
 
 <!-- panvimdoc-ignore-end -->
 
-A simple plugin to compile C files.
+Compile My C (CMC). A simple plugin to compile C files.
 
 ## Contributing
 
@@ -20,7 +20,11 @@ If you have some question or need help with configuration, start a [discussion](
 ```lua
 {
     'AZarbade/cmc.nvim',
+    config = function()
+        require("cmc.config").setup()
+    end,
 }
+
 ```
 
 ## Usage and customization
