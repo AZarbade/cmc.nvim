@@ -33,16 +33,18 @@ Currently in-development.
 
 ## Known Issues
 
-- [ ] Compile progress is not shown.
-- [ ] If compile fails it is silent.
+- [x] Compile progress is not shown.
+  - It shows a simple 'compiling...' msg.
+- [x] If compile fails it is silent.
+  - It shows an error message, but not the error output itself.
 
 ## Todo
 
-- [ ] Async compilation: Perform compilation asynchronously to avoid blocking the editor.
 - [ ] Template generation: Provide commands to generate boilerplate code or common C structures.
 - [ ] Custom compilation flags: Let users specify additional compilation flags, either globally or per-project.
 - [ ] Auto-compilation on save: Option to automatically compile the file when it's saved.
 - [ ] Include path management: Allow users to specify additional include paths for header files.
+- [ ] Async compilation: Perform compilation asynchronously to avoid blocking the editor.
 - [ ] Multiple compiler support: Allow users to choose between different compilers (gcc, clang, etc.) and set compiler-specific flags.
 - [ ] Makefile integration: If a Makefile is present, use it for compilation instead of direct gcc commands.
 - [ ] Debugging integration: Integrate with debugging tools like gdb or lldb.
