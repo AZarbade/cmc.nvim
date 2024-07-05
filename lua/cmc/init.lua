@@ -33,8 +33,11 @@ local function compile(debug)
 		command = string.format("gcc %s -o %s", filename, out_name)
 	end
 
-	vim.o.errorformat = [[%f:%l:%c: %t%*[^:]: %m]]
+	vim.api.nvim_echo({ { "Compiling...", "Normal" } }, false, {})
+
 	local output = vim.fn.system(command)
+
+	vim.api.nvim_command("echo ''")
 
 	if vim.v.shell_error == 0 then
 		vim.api.nvim_echo({ { "Compilation successful! Output: " .. out_name, "Normal" } }, true, {})
