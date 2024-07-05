@@ -26,8 +26,12 @@ local function compile(debug)
 	end
 
 	local out_name = get_output_name()
-	local debug_flag = debug and " -g" or ""
-	local command = string.format("gcc %s -o %s%s", filename, out_name, debug_flag)
+	local command
+	if debug then
+		command = string.format("gcc %s -o %s -g", filename, out_name)
+	else
+		command = string.format("gcc %s -o %s", filename, out_name)
+	end
 
 	vim.o.errorformat = [[%f:%l:%c: %t%*[^:]: %m]]
 	local output = vim.fn.system(command)
