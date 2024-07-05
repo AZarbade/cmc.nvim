@@ -31,6 +31,11 @@ If you have some question or need help with configuration, start a [discussion](
 
 Currently in-development.
 
+## Known Issues
+
+- [ ] Compile progress is not shown.
+- [ ] If compile fails it is silent.
+
 ## Todo
 
 - [ ] Async compilation: Perform compilation asynchronously to avoid blocking the editor.
