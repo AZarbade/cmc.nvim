@@ -4,6 +4,7 @@ local config = {
 	output_name = "main",
 	ask_output_name = false,
 	default_flags = "",
+	compile_on_save = false,
 }
 
 local function compile(args)
