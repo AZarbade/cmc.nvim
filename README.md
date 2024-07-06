@@ -46,6 +46,9 @@ Currently in-development.
 - [ ] Include path management: Allow users to specify additional include paths for header files.
 - [ ] Async compilation: Perform compilation asynchronously to avoid blocking the editor.
 - [ ] Multiple compiler support: Allow users to choose between different compilers (gcc, clang, etc.) and set compiler-specific flags.
+  - [ ] GCC
+  - [ ] Clang
+  - [ ] TinyCC
 - [ ] Makefile integration: If a Makefile is present, use it for compilation instead of direct gcc commands.
 - [ ] Debugging integration: Integrate with debugging tools like gdb or lldb.
 - [ ] Static analysis: Integrate static analysis tools (like cppcheck or valgrind) and display results.
