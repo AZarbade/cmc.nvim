@@ -11,6 +11,16 @@ function M.setup(opts)
 			require("cmc").compile(input or "")
 		end)
 	end, { noremap = true, silent = false })
+
+	-- autocommand for compile on save
+	if opts.compile_on_save then
+		vim.api.nvim_create_autocmd("BufWritePost", {
+			pattern = "*.c",
+			callback = function()
+				require("cmc").compile()
+			end,
+		})
+	end
 end
 
 return M
