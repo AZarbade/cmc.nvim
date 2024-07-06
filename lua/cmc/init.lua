@@ -1,4 +1,5 @@
 local M = {}
+
 local config = {
 	output_name = "main",
 	ask_output_name = false,
@@ -24,7 +25,6 @@ local function compile(args)
 
 	local user_args = args or ""
 	local command = string.format("gcc %s %s %s -o %s", user_args, config.default_flags, filename, out_name)
-	print("Debug: Command = " .. command) -- Debug line
 
 	vim.api.nvim_echo({ { "Compiling...", "Normal" } }, false, {})
 	local output = vim.fn.system(command)
@@ -32,7 +32,8 @@ local function compile(args)
 	if vim.v.shell_error == 0 then
 		vim.api.nvim_echo({ { "Compilation successful! Output: " .. out_name, "Normal" } }, true, {})
 	else
-		vim.api.nvim_err_writeln("Compilation failed. Error: " .. output)
+		local error = string.format("ERROR: Compilation failed. Error: %s", output)
+		vim.api.nvim_echo({ { error, "ErrorMsg" } }, false, {})
 	end
 end
 
