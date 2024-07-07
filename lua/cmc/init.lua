@@ -1,7 +1,7 @@
 local M = {}
 
 local config = {
-	output_name = "main",
+	output_name = "main.out",
 	ask_output_name = false,
 	default_flags = "",
 	compile_on_save = false,
