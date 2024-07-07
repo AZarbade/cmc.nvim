@@ -52,9 +52,9 @@ require('cmc').setup({
 
 ## 🎮 Usage
 
-- :CompileC [args] - Compile with optional arguments
-- <leader>cc - Prompt for compiler flags and compile
-- compile_on_save = true - Save your C file and watch the magic happen! ✨
+- `:CompileC [args]` - Compile with optional arguments
+- `<leader>cc` - Prompt for compiler flags and compile
+- `compile_on_save = true` - Save your C file and watch the magic happen! ✨
 
 ## Known Issues
 
