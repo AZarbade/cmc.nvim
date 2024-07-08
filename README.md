@@ -8,6 +8,10 @@
 
 Welcome to cmc.nvim, a Neovim plugin that makes compiling C handy.
 
+**NOTE**: As of now, main functionalty of this plugin can be solved with just 1 keybind.
+`vim.api.nvim_set_keymap('n', '<F5>', [[:!gcc % -o main.out<CR>]], { noremap = true, silent = true })`
+I will be adding more features as needed. There is no roadmap defined for this project.
+
 ## 🌟 Features
 
 - 🔧 Compile C files right from Neovim - no terminal juggling required!
