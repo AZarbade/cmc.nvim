@@ -31,23 +31,23 @@ I will be adding more features as needed. There is no roadmap defined for this p
 
 ```lua
 require('cmc').setup({
-  output_name = "a.out",            -- Be a rebel, don't use "main"
+  output_name = "main.out",
 
   -- Sets the default name for compiled executables.
   -- Default: main.out
 
-  ask_output_name = false,          -- Ain't nobody got time for that
+  ask_output_name = false,
 
   -- If true, prompts for output name before each compilation
   -- If false, uses output_name (defined above)
   -- Default: false
 
-  default_flags = "-Wall -Wextra",  -- Show ALL the warnings!
+  default_flags = "",
 
   -- Compiler flags used in every compilation
   -- Default: ""
 
-  compile_on_save = true,           -- Ride the lightning!
+  compile_on_save = false,
 
   -- If true, compiles C files automatically on save
   -- Default: false
